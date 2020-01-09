@@ -1,0 +1,15 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true
+  },
+  "plugins": ["prettier", "react", "jsx-a11y", "import"],
+  "extends": ["airbnb", "prettier", "plugin:node/recommended"],
+  "rules": {
+    "prettier/prettier": "error",
+    "no-unused-vars": "warn",
+    "no-console": "off",
+    "func-names": "off",
+    "no-process-exit": "off"
+  }
+}
