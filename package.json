@@ -5,6 +5,9 @@
   "repository": "https://github.com/humbertoluks/gobarber.git",
   "author": "Humberto Luksevicius <luks.develop@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "^12"
+  },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
@@ -36,10 +39,15 @@
     "husky": "^4.0.3",
     "nodemon": "^2.0.2",
     "prettier": "^1.19.1",
+    "sequelize-cli": "^5.5.1",
     "sucrase": "^3.12.0"
   },
   "dependencies": {
-    "express": "^4.17.1"
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "pg": "^7.17.0",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^5.21.3"
   },
   "config": {
     "commitizen": {
