@@ -1,10 +1,11 @@
 {
   "parser": "babel-eslint",
   "env": {
+    "es7": true,
     "browser": true
   },
-  "plugins": ["prettier", "react", "jsx-a11y", "import"],
   "extends": ["airbnb", "prettier", "plugin:node/recommended"],
+  "plugins": ["prettier", "react", "jsx-a11y", "import"],
   "rules": {
     "prettier/prettier": "error",
     "no-unused-vars": "warn",

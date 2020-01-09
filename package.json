@@ -7,11 +7,13 @@
   "license": "MIT",
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "scripts": {
-    "dev": "nodemon ./src/server.js"
+    "dev": "nodemon ./src/server.js",
+    "dev:debug": "nodemon --inspect ./src/server.js"
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
@@ -19,6 +21,8 @@
     "@typescript-eslint/eslint-plugin": "^2.14.0",
     "@typescript-eslint/parser": "^2.14.0",
     "babel-eslint": "^10.0.3",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-node": "^4.0.0",
@@ -31,9 +35,15 @@
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^4.0.3",
     "nodemon": "^2.0.2",
-    "prettier": "^1.19.1"
+    "prettier": "^1.19.1",
+    "sucrase": "^3.12.0"
   },
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
