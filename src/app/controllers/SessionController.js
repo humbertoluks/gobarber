@@ -1,4 +1,4 @@
-// import * as Yup from 'yup';
+import * as Yup from 'yup';
 import jwt from 'jsonwebtoken';
 
 import authConfig from '../../config/auth';
@@ -6,16 +6,16 @@ import User from '../models/User';
 
 class SessionController {
   async store(req, res) {
-    // const schema = Yup.object().shape({
-    //   email: Yup.string()
-    //     .email()
-    //     .required(),
-    //   password: Yup.string().required(),
-    // });
+    const schema = Yup.object().shape({
+      email: Yup.string()
+        .email()
+        .required(),
+      password: Yup.string().required(),
+    });
 
-    // if (!(await schema.isValid(req.body))) {
-    //   return res.status(400).json({ message: 'Validation fails' });
-    // }
+    if (!(await schema.isValid(req.body))) {
+      return res.status(400).json({ message: 'Validation fails' });
+    }
 
     const { email, password } = req.body;
 
