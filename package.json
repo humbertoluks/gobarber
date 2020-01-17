@@ -15,8 +15,8 @@
     }
   },
   "scripts": {
-    "dev": "nodemon ./src/server.js",
-    "dev:debug": "nodemon --inspect ./src/server.js"
+    "dev": "nodemon ./src/server.js 9229",
+    "dev:debug": "nodemon --inspect=9229 ./src/server.js "
   },
   "devDependencies": {
     "@commitlint/cli": "^8.3.4",
@@ -57,5 +57,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "comments": {
+    "nodemon": "https://www.npmjs.com/package/nodemon , como setar a porta para debug no chrome"
   }
 }

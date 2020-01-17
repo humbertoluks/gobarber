@@ -1,4 +1,7 @@
 {
+  "inspect": true,
+  "ignore": [".git", "node_modules"],
+  "watch": ["src"],
   "execMap": {
     "js": "node -r sucrase/register"
   }
