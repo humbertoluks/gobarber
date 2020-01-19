@@ -1,15 +1,12 @@
 {
-  // A porta padrão é 9229
-  // a porta 60005 pode ser uma alternativa quando
-  // a porta padão estiver em uso.
-  // chrome://inspect/#devices
   "version": "0.2.0",
   "configurations": [
     {
+      "name": "Attach to Process",
       "type": "node",
       "request": "attach",
-      "name": "Launch Program",
       "protocol": "inspector",
+      "address": "localhost",
       "port": 9229,
       "restart": true,
       "skipFiles": ["<node_internals>/**"]

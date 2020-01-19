@@ -24,14 +24,16 @@ class Database {
   }
 
   mongoinit() {
-    this.mongoconnection = mongoose.connect(
-      'mongodb://localhost:27017/gobarber',
-      {
+    this.mongoconnection = mongoose
+      .connect('mongodb://localhost:27017/gobarber', {
         useNewUrlParser: true,
         useFindAndModify: true,
         useUnifiedTopology: true,
-      }
-    );
+      })
+      .then(() => 'MongoDB connected')
+      .catch(err => {
+        console.log(Error, err.message);
+      });
   }
 }
 
